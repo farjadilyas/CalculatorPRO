@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Converter"
+    android:background="?attr/bgColor">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="413dp"
+            android:layout_height="51dp"
+            android:background="?attr/bgColor"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:subtitleTextColor="?attr/textColor"
+            app:theme="@style/ToolbarTheme"
+            app:titleTextColor="?attr/textColor" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="1dp"
+            android:background="#ffffff"
+            android:backgroundTint="?attr/foregroundColor"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+            tools:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/BTLD"
+            style="@style/toolbar_icon"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/my_toolbar"
+            app:srcCompat="@drawable/ic_light_bulb" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <HorizontalScrollView
+        android:id="@+id/conv_list"
+        android:layout_width="410dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:fillViewport="true"
+        android:paddingStart="0dp"
+        android:paddingLeft="16dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:checkedButton="@id/BTNAREA"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/BTNAREA"
+                style="@style/rad_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Area" />
+
+            <RadioButton
+                android:id="@+id/BTNLENGTH"
+                style="@style/rad_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Length" />
+
+            <RadioButton
+                android:id="@+id/BTNTEMP"
+                style="@style/rad_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Temperature" />
+
+            <RadioButton
+                android:id="@+id/BTNVOL"
+                style="@style/rad_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Volume" />
+
+            <RadioButton
+                android:id="@+id/BTNMASS"
+                style="@style/rad_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Mass" />
+
+            <RadioButton
+                android:id="@+id/BTNDATA"
+                style="@style/rad_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Data" />
+        </RadioGroup>
+
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/CBT4"
+        style="@style/numpadlarge"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="4"
+        app:layout_constraintBottom_toTopOf="@+id/CBT1"
+        app:layout_constraintEnd_toStartOf="@+id/CBT5" />
+
+    <Button
+        android:id="@+id/CBTD"
+        style="@style/numpadlarge"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:text="."
+        app:layout_constraintBottom_toTopOf="@+id/CBTCAL"
+        app:layout_constraintEnd_toStartOf="@+id/CBT0" />
+
+    <Button
+        android:id="@+id/CBT0"
+        style="@style/numpadlarge"
+        android:layout_marginBottom="24dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/CBTCAL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/CBTC"
+        style = "@style/numpadlarge"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="24dp"
+        android:text="C"
+        app:layout_constraintBottom_toTopOf="@+id/CBTCAL"
+        app:layout_constraintStart_toEndOf="@+id/CBT0" />
+
+    <Button
+        android:id="@+id/CBT2"
+        style="@style/numpadlarge"
+        android:layout_marginBottom="16dp"
+        android:text="2"
+        app:layout_constraintBottom_toTopOf="@+id/CBT0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/CBT1"
+        style="@style/numpadlarge"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/CBTD"
+        app:layout_constraintEnd_toStartOf="@+id/CBT2" />
+
+    <Button
+        android:id="@+id/CBT3"
+        style = "@style/numpadlarge"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="3"
+        app:layout_constraintBottom_toTopOf="@+id/CBTC"
+        app:layout_constraintStart_toEndOf="@+id/CBT2" />
+
+    <Button
+        android:id="@+id/CBT8"
+        style="@style/numpadlarge"
+        android:layout_marginBottom="16dp"
+        android:text="8"
+        app:layout_constraintBottom_toTopOf="@+id/CBT5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/CBT7"
+        style="@style/numpadlarge"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="7"
+        app:layout_constraintBottom_toTopOf="@+id/CBT4"
+        app:layout_constraintEnd_toStartOf="@+id/CBT8" />
+
+    <Button
+        android:id="@+id/CBT5"
+        style="@style/numpadlarge"
+        android:layout_marginBottom="16dp"
+        android:text="5"
+        app:layout_constraintBottom_toTopOf="@+id/CBT2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/CBT6"
+        style="@style/numpadlarge"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="6"
+        app:layout_constraintBottom_toTopOf="@+id/CBT3"
+        app:layout_constraintStart_toEndOf="@+id/CBT5" />
+
+    <Button
+        android:id="@+id/CBT9"
+        style="@style/numpadlarge"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="9"
+        app:layout_constraintBottom_toTopOf="@+id/CBT6"
+        app:layout_constraintStart_toEndOf="@+id/CBT8" />
+
+    <Button
+        android:id="@+id/CBTCAL"
+        android:layout_width="181dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/colorGreen"
+        android:hapticFeedbackEnabled="true"
+        android:radius="20dp"
+        android:text="CALCULATE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="?attr/foregroundColor"
+        app:layout_constraintBottom_toTopOf="@+id/CBT9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="?attr/foregroundColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conv_list" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="?attr/foregroundColor"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <Spinner
+        android:id="@+id/areaSelectorTop"
+        android:layout_width="143dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:dropDownWidth="wrap_content"
+        android:textColor = "?attr/textColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <Spinner
+        android:id="@+id/areaSelectorBottom"
+        android:layout_width="143dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:dropDownWidth="wrap_content"
+        android:textColor = "?attr/textColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+    <EditText
+        android:id="@+id/areaValueTop"
+        android:layout_width="240dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="4dp"
+        android:background="@null"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="numberDecimal"
+        android:textAlignment="textEnd"
+        android:textSize="36sp"
+        android:textColor = "?attr/textColor"
+        app:layout_constraintBottom_toTopOf="@+id/divider3"
+        app:layout_constraintEnd_toStartOf="@+id/areaUnitTop" />
+
+    <EditText
+        android:id="@+id/areaValueBottom"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="4dp"
+        android:background="@null"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="numberDecimal"
+        android:textAlignment="textEnd"
+        android:textSize="36sp"
+        android:textColor = "?attr/textColor"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toStartOf="@+id/areaUnitBottom" />
+
+    <TextView
+        android:id="@+id/areaUnitTop"
+        android:layout_width="41dp"
+        android:layout_height="29dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:textColor="?attr/textColor"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/divider3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/areaUnitBottom"
+        android:layout_width="41dp"
+        android:layout_height="29dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:textColor="?attr/textColor"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

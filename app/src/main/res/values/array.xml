@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="areaUnitOnly">
+        <item>ac</item>
+        <item>a</item>
+        <item>ha</item>
+        <item>m\u00B2</item>
+        <item>ft\u00B2</item>
+        <item>in\u00B2</item>
+        <item>m\u00B2</item>
+    </string-array>
+</resources>

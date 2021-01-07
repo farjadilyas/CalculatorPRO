@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Calculator Pro</string>
+    <string name="edit_message">Enter a number</string>
+    <string name="button_send">Calculate</string>
+
+    <string-array name="areaUnit">
+        <item>Acres</item>
+        <item>Ares</item>
+        <item>Hectares</item>
+        <item>Sq. Centimetres</item>
+        <item>Sq. feet</item>
+        <item>Sq. inches</item>
+        <item>Sq. metres</item>
+    </string-array>
+
+    <string-array name = "lengthUnit">
+        <item>Millimetres</item>
+        <item>Centimetres</item>
+        <item>Metres</item>
+        <item>Kilometres</item>
+        <item>Inches</item>
+        <item>Feet</item>
+        <item>Yards</item>
+        <item>Miles</item>
+        <item>Nautical Miles</item>
+        <item>Mils</item>
+    </string-array>
+
+    <string-array name = "tempUnit">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+        <item>Kelvin</item>
+    </string-array>
+
+    <string-array name = "volUnit">
+        <item>UK gallons</item>
+        <item>US gallons</item>
+        <item>Litres</item>
+        <item>Millilitres</item>
+        <item>Cubic centimetres</item>
+        <item>Cubic metres</item>
+        <item>Cubic inches</item>
+        <item>Cubic feet</item>
+    </string-array>
+
+    <string-array name = "massUnit">
+        <item>Tons</item>
+        <item>UK tons</item>
+        <item>US tons</item>
+        <item>Pounds</item>
+        <item>Ounces</item>
+        <item>Kilogrammes</item>
+        <item>Grams</item>
+    </string-array>
+
+    <string-array name = "dataUnit">
+        <item>Bits</item>
+        <item>Bytes</item>
+        <item>Kilobytes</item>
+        <item>Megabytes</item>
+        <item>Gigabytes</item>
+        <item>Terabytes</item>
+    </string-array>
+
+</resources>

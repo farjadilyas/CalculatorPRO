@@ -1,0 +1,129 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="LightTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="textColor">#000000</item>
+        <item name="foregroundButton">#ECECEC</item>
+        <item name="bgColor">#ffffff</item>
+        <item name = "foregroundColor">#000000</item>
+        <item name = "foregroundLightColor">#ECECEC</item>
+    </style>
+
+    <style name="DarkTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="textColor">#ffffff</item>
+        <item name="foregroundButton">#212121</item>
+        <item name="bgColor">#000000</item>
+        <item name = "foregroundColor">#ffffff</item>
+        <item name = "foregroundLightColor">#212121</item>
+    </style>
+
+    <style name = "clrhistbtn">
+        <item name = "android:background">@drawable/clrhist_ripple</item>
+        <item name="android:backgroundTint">@color/colorGreen</item>
+        <item name = "android:textAlignment">center</item>
+    </style>
+
+    <style name="numpadop">
+        <item name="android:layout_width">110dp</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="bgColor">?attr/bgColor</item>
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:backgroundTint">?attr/foregroundButton</item>
+        <item name="android:hapticFeedbackEnabled">true</item>
+        <item name="android:radius">20dp</item>
+        <item name="android:textColor">@color/colorGreen</item>
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <style name="numpad" parent = "numpadop">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">44sp</item>
+    </style>
+
+    <style name="numpadlarge" parent = "numpadop">
+        <item name="android:layout_width">110dp</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">48sp</item>
+    </style>
+
+
+
+    <style name="numpadsm" parent = "numpadop">
+        <item name="android:layout_width">75dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="numpadopsm" parent = "numpadop">
+        <item name="android:layout_width">75dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name = "shortcuts">
+        <item name = "android:background">?attr/bgColor</item>
+        <item name = "android:layout_width">60dp</item>
+        <item name = "android:layout_height">60dp</item>
+        <item name = "layout_goneMarginBottom">20dp</item>
+        <item name = "android:tint">?attr/foregroundColor</item>
+        <item name = "android:adjustViewBounds">true</item>
+        <item name = "android:padding">16dp</item>
+        <item name = "android:scaleType">fitCenter</item>
+    </style>
+
+    <style name = "toolbar_icon" parent = "shortcuts">
+        <item name = "android:layout_width">30dp</item>
+        <item name = "android:layout_height">30dp</item>
+        <item name = "android:padding">0dp</item>
+    </style>
+
+    <style name = "shortcutssm" parent = "shortcuts">
+        <item name = "android:layout_width">48dp</item>
+        <item name = "android:layout_height">48dp</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <style name = "toolbar">
+        <item name = "android:background">?attr/bgColor</item>
+        <item name = "android:elevation">4dp</item>
+        <item name = "android:titleTextColor">?attr/textColor</item>
+        <item name = "android:subtitleTextColor">?attr/textColor</item>
+        <item name = "android:textColor">?attr/textColor</item>
+    </style>
+
+    <style name = "textbox">
+        <item name = "android:textColor">?attr/textColor</item>
+    </style>
+
+    <style name = "rad_button">
+        <item name = "android:button">@null</item>
+        <item name = "android:background">@drawable/menu_button</item>
+        <item name = "android:textColor">?attr/textColor</item>
+        <item name = "android:textAlignment">center</item>
+        <item name = "android:padding">12dp</item>
+        <item name = "android:paddingStart">12dp</item>
+        <item name = "android:paddingTop">8dp</item>
+        <item name = "android:paddingEnd">12dp</item>
+        <item name = "android:paddingBottom">8dp</item>
+    </style>
+
+
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="colorControlNormal">?attr/foregroundColor</item>
+    </style>
+</resources>
